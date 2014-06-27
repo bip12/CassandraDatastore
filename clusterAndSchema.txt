@@ -1,0 +1,25 @@
+
+>CREATE KEYSPACE bkarki with REPLICATION ={'class':'SimpleStrategy', 'replication_factor':1};
+>use lucas;
+>CREATE TABLE books(
+    textid text,
+    title text,
+    author text,
+    releasedate text,
+    language text,
+    PRIMARY KEY(textid, title, author));
+
+>CREATE TABLE bookrepo(textid text,text text,PRIMARY KEY(textid));
+
+
+>select * from books;
+
+# to create table with composite keys
+
+>CREATE TABLE books(
+    textid text,
+    title text,
+    author text,
+    releasedate text,
+    language text,
+    PRIMARY KEY(textid,author));
